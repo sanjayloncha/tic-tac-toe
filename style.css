@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    background-color: rebeccapurple;
+    padding:20px;
+    color: white ;
+    text-align: center;
+}
+
+#board {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+    justify-content: center;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.box{
+    border: 2px solid black;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9vw;
+    cursor: pointer;
+}
+
+.box:hover{
+    background-color: rgb(229, 221, 236)
+}
+
+.bl {
+    border-left: 0;
+}
+
+.br {
+    border-right: 0;
+}
+
+.bt {
+    border-top: 0;
+}
+
+.bb {
+    border-bottom: 0;
+}
+.btr {
+    border-top-right-radius: 10px;
+}
+.btl {
+    border-top-left-radius: 10px;
+}
+
+.bbl {
+    border-bottom-left-radius: 10px;
+}
+
+.bbr {
+    border-bottom-right-radius: 10px;
+}
+
+#info {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px solid black;
+}
+button {
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 200;margin-left: 50px;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.turn {
+    display: block;
+    padding: 10px;
+    margin-bottom: 100px;
+    font-size: 30px;
+    display: flex;
+    text-align: justify;
+}
