@@ -20,23 +20,29 @@ body {
     text-align: center;
 }
 
+#container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    /* background-color: gray; */
+}
+
 #board {
     width: 50%;
     display: grid;
     grid-template-columns: repeat(3, 10vw);
     grid-template-rows: repeat(3, 10vw);
     justify-content: center;
+    /* background-color: red; */
 }
 
-#container {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
+
 
 .box {
     border: 2px solid black;
-    box-shadow: 0 0 10px black;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+    /* box-shadow: 0 0 10px black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +94,7 @@ body {
     flex-direction: column;
     align-items: center;
     border-left: 2px solid black;
+    /* background-color: green; */
 }
 
 button {
@@ -120,43 +127,68 @@ button {
 
 
 
-
-
-
-
-
-
-
-
-
-
 @media all and (min-width: 320px) and (max-width: 767px) {
-    .turn {
+    /* .turn {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         font-size: 10px;
-    }
+    } */
 
-    h3 {
-        padding: 10px;
-        font-size: 20px;
-    }
-
+    /* 
     #resetBtn {
         padding: 3px 5px;
         font-size: 15px;
         margin-right: 50px;
     }
-    
+     */
 
-    #info {
+    /* #info {
         border-left: 0px;
         height: 20vh;
         display: flex;
-    } 
+    }  */
 
-   
+    #container {
+        display: block;
+        margin: auto;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        /* background-color: gray; */
+    }
+
+    #board {
+        margin: 30px auto;
+        /* background-color: teal; */
+        width: 100%;
+        height: 100px;
+    }
+
+    #info {
+        /* background-color: crimson; */
+        margin: auto;
+        border-top: 2px solid black;
+        border-left: 0px;
+        width: 80%;
+        display: block;
+        margin: auto;
+        /* height: 50px; */
+    }
+
+    .turn {
+        /* background-color: green; */
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    #resetBtn {
+        /* background-color: aqua; */
+        display: block;
+        margin: auto;
+    }
+
+
 }
-

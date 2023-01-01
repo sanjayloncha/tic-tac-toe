@@ -68,7 +68,7 @@ Array.from(box).forEach((elem) => {
                 let winner = document.querySelector(".gameOverMessage") ;
                 winner.style.display = "block" 
                 winner.style.textAlign = "center" ;
-                winner.innerText = `Game Over! Player ${turn} wins` ;
+                winner.innerText = `Player ${turn} wins` ;
             }else{
                 turn = nextTurn();
                 player.innerText = turn;
