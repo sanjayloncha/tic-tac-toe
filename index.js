@@ -44,20 +44,29 @@ const gameOver = () => {
     ]
 
     let winChacesMob = [
-        [1, 4, 7, 33.5, 22, 90]
+        [0, 1, 2, 33.2, 7.2, 0],
+        [3, 4, 5, 33.2, 22.5, 0],
+        [6, 7, 8, 33.2, 37.5, 0],
+        [0, 3, 6, 18.5, 22.2, 90],
+        [1, 4, 7, 33.5, 22.2, 90],
+        [2, 5, 8, 48.5, 22.2, 90],
+        [0, 4, 8, 34, 23, 45],
+        [2, 4, 6, 34, 22, 135]
     ]
+
 
     winChaces.forEach((elem, i) => {
 
         if (box[winChaces[i][0]].innerText === box[winChaces[i][1]].innerText && box[winChaces[i][1]].innerText === box[winChaces[i][2]].innerText && box[winChaces[i][0]].innerText !== "") {
             if (window.innerWidth <= 767) {
-                console.log("hello");
+                // console.log("mob screen");
                 gameOverFlag = true;
                 document.querySelector(".line").style.width = "33vw";
                 document.getElementById('board').style.pointerEvents = 'none';
-                document.querySelector(".line").style.transform = `translate(${winChacesMob[0][3]}vw,${winChacesMob[0][4]}vw) rotate(${winChacesMob[0][5]}deg) `
+                document.querySelector(".line").style.transform = `translate(${winChacesMob[i][3]}vw,${winChacesMob[i][4]}vw) rotate(${winChacesMob[i][5]}deg) `
                 return gameOverFlag;
             } else {
+                // console.log("pc screen");
                 gameOverFlag = true;
                 document.querySelector(".line").style.width = "25vw";
                 document.getElementById('board').style.pointerEvents = 'none';
