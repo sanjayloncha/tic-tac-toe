@@ -3,6 +3,7 @@ let player = document.getElementById("player");
 let turn = "X";
 player.innerText = turn;
 let gameOverFlag = false;
+let count = 0;
 
 let resetBtn = document.getElementById("resetBtn");
 resetBtn.addEventListener("click", () => {
@@ -11,6 +12,7 @@ resetBtn.addEventListener("click", () => {
     Array.from(box).forEach((elem) => {
         elem.innerText = "";
     })
+    count = 0;
     turn = "X";
     player.innerText = turn;
     gameOverFlag = false ;
@@ -47,12 +49,14 @@ const gameOver = () => {
             document.getElementById('board').style.pointerEvents = 'none'
             return gameOverFlag ;
         }else{
-            return gameOverFlag ;
+            count++ ;
         }
     })
     return gameOverFlag ;
 }
-
+if(count==8){
+    document.querySelector(".gameOverMessage").innerText = "DRAW" ;
+}
 
 let box = document.getElementsByClassName("box");
 
@@ -62,7 +66,7 @@ Array.from(box).forEach((elem) => {
         if (elem.innerText != "X" && elem.innerText != "O") {
             elem.innerText = turn;
             let check = gameOver();
-            console.log(check);
+            // console.log(check);
             if(check){
                 document.getElementById("playerTurnTitle").style.display = " none" ;
                 let winner = document.querySelector(".gameOverMessage") ;
