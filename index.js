@@ -1,5 +1,5 @@
-let player = document.getElementById("player");
 
+let player = document.getElementById("player");
 let turn = "X";
 player.innerText = turn;
 let gameOverFlag = false;
@@ -26,8 +26,6 @@ resetBtn.addEventListener("click", () => {
 const nextTurn = () => {
     return turn === "X" ? "O" : "X"
 }
-
-
 
 
 const gameOver = () => {
